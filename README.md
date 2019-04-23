@@ -10,7 +10,7 @@ StringOps is available as both a Node.js package available through NPM and as an
 
 To download StringOps through NPM, use the following command:
 
-```bash
+```shell
 $ npm install stringops
 ```
 From here you can either require the package:
@@ -35,68 +35,66 @@ import { ltrim, ucwords, nthIndexOf } from './path/to/stringops.js';
 
 A breakdown of all of the API can be found
 
-### Functions
-
-[Transform](#transform)
-  
-  - [ucword(str)](#ucword)
+### **Conversion Functions**
 
 <dl>
-<dt><a href="#bin2Hex">bin2Hex(bin)</a> ⇒ <code>string</code></dt>
+<dt><a href="#bin2Hexbin">bin2Hex(bin)</a> ⇒ <code>string</code></dt>
 <dd><p>Converts a binary string to hexadecimal.</p>
 </dd>
-<dt><a href="#hex2Bin">hex2Bin(hex)</a> ⇒ <code>string</code></dt>
+<dt><a href="#hex2Binhex">hex2Bin(hex)</a> ⇒ <code>string</code></dt>
 <dd><p>Converts a hexadecimal to a binary string.</p>
 </dd>
-<dt><a href="#count">count(haystack, needle)</a> ⇒ <code>number</code></dt>
+
+### **Search/Find Functions**
+<dt><a href="#counthaystack-needle">count(haystack, needle)</a> ⇒ <code>number</code></dt>
 <dd><p>Count the number of occurances that a substring is found
 in a string.</p>
 </dd>
-<dt><a href="#countChars">countChars(str)</a> ⇒ <code>Object</code></dt>
+<dt><a href="#countCharsstr">countChars(str)</a> ⇒ <code>Object</code></dt>
 <dd><p>Counts the number of times each character appears in the string.</p>
 </dd>
-<dt><a href="#nthIndexOf">nthIndexOf(str, sub, occurance)</a> ⇒ <code>number</code></dt>
+<dt><a href="#nthIndexOfstr-sub-occurance">nthIndexOf(str, sub, occurance)</a> ⇒ <code>number</code></dt>
 <dd><p>Find the position of the nth occurance of a substring in a string.</p>
 </dd>
-<dt><a href="#levenshtein">levenshtein(str1, str2)</a> ⇒ <code>number</code></dt>
+<dt><a href="#levenshteinstr1-str2">levenshtein(str1, str2)</a> ⇒ <code>number</code></dt>
 <dd><p>Calculates the Levenshtein distance between two strings.</p>
 <p>Reference: <a href="https://gist.github.com/andrei-m/982927">https://gist.github.com/andrei-m/982927</a></p>
 </dd>
-<dt><a href="#ucword">ucword(str)</a> ⇒ <code>string</code></dt>
+
+### **Transform Functions**
+<dt><a href="#ucwordstr">ucword(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Capitalize the first letter of the first word.</p>
 </dd>
-<dt><a href="#ucwords">ucwords(str)</a> ⇒ <code>string</code></dt>
+<dt><a href="#ucwordsstr">ucwords(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Capitalizes the first letter of every word.</p>
 </dd>
-<dt><a href="#lcword">lcword(str)</a> ⇒ <code>string</code></dt>
+<dt><a href="#lcwordstr">lcword(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Make the first letter of the first word lowercase.</p>
 </dd>
-<dt><a href="#lcwords">lcwords(str)</a> ⇒ <code>string</code></dt>
+<dt><a href="#lcwordsstr">lcwords(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Make the first letters of each word lowercase.</p>
 </dd>
-<dt><a href="#wordwrap">wordwrap(str)</a> ⇒ <code>string</code></dt>
+<dt><a href="#wordwrapstr">wordwrap(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Wraps a string to a given number of characters.</p>
 </dd>
-<dt><a href="#reverse">reverse(str)</a> ⇒ <code>string</code></dt>
+<dt><a href="#reversestr">reverse(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Reverses a string.</p>
 </dd>
-<dt><a href="#ltrim">ltrim(str)</a> ⇒ <code>string</code></dt>
+<dt><a href="#ltrimstr">ltrim(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Trim all whitespace from the beginning of a string.</p>
 </dd>
-<dt><a href="#rtrim">rtrim(str)</a> ⇒ <code>string</code></dt>
+<dt><a href="#rtrimstr">rtrim(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Trim all whitespace from the end of a string.</p>
 </dd>
-<dt><a href="#money">money(amount, [locale])</a> ⇒ <code>string</code></dt>
+<dt><a href="#moneyamount-locale">money(amount, [locale])</a> ⇒ <code>string</code></dt>
 <dd><p>Formats a string into a representation of a type of currency.</p>
 <p>Currently only US/GB is supported is supported but more will be added with later
 updates.</p>
 </dd>
-<dt><a href="#pad">pad(str, sub, [amount], [side])</a> ⇒ <code>string</code></dt>
+<dt><a href="#padstr-sub-amount-side">pad(str, sub, [amount], [side])</a> ⇒ <code>string</code></dt>
 <dd><p>Pads a string with a substring on one or both sides.</p>
 </dd>
 </dl>
-
-[wwww](#pad)
 
 ## API
 
@@ -253,7 +251,7 @@ Trim all whitespace from the end of a string.
 | --- | --- | --- |
 | str | <code>string</code> | The string to remove whitespace from. |
 
-### money(amount, [locale])
+### money(amount, locale)
 Formats a string into a representation of a type of currency.
 
 Currently only US/GB is supported is supported but more will be added with later
@@ -267,7 +265,7 @@ updates.
 | amount | <code>string</code> \| <code>number</code> |  | The string or number that represents the money amount. |
 | [locale] | <code>string</code> | <code>&quot;&#x27;US&#x27;&quot;</code> | The locale to use to format the currency. |
 
-### pad(str, sub, [amount], [side])
+### pad(str, sub, amount, side)
 Pads a string with a substring on one or both sides.
 
 **Returns**: <code>string</code> - Returns the padded string.  
