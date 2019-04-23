@@ -35,7 +35,7 @@ import { ltrim, ucwords, nthIndexOf } from './path/to/stringops.js';
 
 A breakdown of all of the API can be found
 
-#### **Conversion Functions**
+### **Conversion Functions**
 
 <a href="#bin2Hexbin">bin2Hex(bin)</a>
 Converts a binary string to hexadecimal.
@@ -43,7 +43,9 @@ Converts a binary string to hexadecimal.
 <a href="#hex2Binhex">hex2Bin(hex)</a>
 Converts a hexadecimal to a binary string.
 
-#### **Search/Find Functions**
+---
+
+### **Search/Find Functions**
 <a href="#counthaystack-needle">count(haystack, needle)</a>
 Count the number of occurances that a substring is found
 in a string.
@@ -57,8 +59,9 @@ Find the position of the nth occurance of a substring in a string.
 <a href="#levenshteinstr1-str2">levenshtein(str1, str2)</a>
 Calculates the Levenshtein distance between two strings.
 
+---
 
-#### **Transform Functions**
+### **Transform Functions**
 <a href="#ucwordstr">ucword(str)</a>
 Capitalize the first letter of the first word.
 
