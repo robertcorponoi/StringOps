@@ -44,61 +44,58 @@ Converts a binary string to hexadecimal.
 Converts a hexadecimal to a binary string.
 
 #### **Search/Find Functions**
-<dt><a href="#counthaystack-needle">count(haystack, needle)</a> ⇒ <code>number</code></dt>
-<dd><p>Count the number of occurances that a substring is found
-in a string.</p>
-</dd>
-<dt><a href="#countCharsstr">countChars(str)</a> ⇒ <code>Object</code></dt>
-<dd><p>Counts the number of times each character appears in the string.</p>
-</dd>
-<dt><a href="#nthIndexOfstr-sub-occurance">nthIndexOf(str, sub, occurance)</a> ⇒ <code>number</code></dt>
-<dd><p>Find the position of the nth occurance of a substring in a string.</p>
-</dd>
-<dt><a href="#levenshteinstr1-str2">levenshtein(str1, str2)</a> ⇒ <code>number</code></dt>
-<dd><p>Calculates the Levenshtein distance between two strings.</p>
-<p>Reference: <a href="https://gist.github.com/andrei-m/982927">https://gist.github.com/andrei-m/982927</a></p>
-</dd>
+<a href="#counthaystack-needle">count(haystack, needle)</a>
+Count the number of occurances that a substring is found
+in a string.
+
+<a href="#countCharsstr">countChars(str)</a>
+Counts the number of times each character appears in the string.</p>
+
+<a href="#nthIndexOfstr-sub-occurance">nthIndexOf(str, sub, occurance)</a>
+Find the position of the nth occurance of a substring in a string.
+
+<a href="#levenshteinstr1-str2">levenshtein(str1, str2)</a>
+Calculates the Levenshtein distance between two strings.
+
 
 #### **Transform Functions**
-<dt><a href="#ucwordstr">ucword(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Capitalize the first letter of the first word.</p>
-</dd>
-<dt><a href="#ucwordsstr">ucwords(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Capitalizes the first letter of every word.</p>
-</dd>
-<dt><a href="#lcwordstr">lcword(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Make the first letter of the first word lowercase.</p>
-</dd>
-<dt><a href="#lcwordsstr">lcwords(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Make the first letters of each word lowercase.</p>
-</dd>
-<dt><a href="#wordwrapstr">wordwrap(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Wraps a string to a given number of characters.</p>
-</dd>
-<dt><a href="#reversestr">reverse(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Reverses a string.</p>
-</dd>
-<dt><a href="#ltrimstr">ltrim(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Trim all whitespace from the beginning of a string.</p>
-</dd>
-<dt><a href="#rtrimstr">rtrim(str)</a> ⇒ <code>string</code></dt>
-<dd><p>Trim all whitespace from the end of a string.</p>
-</dd>
-<dt><a href="#moneyamount-locale">money(amount, [locale])</a> ⇒ <code>string</code></dt>
-<dd><p>Formats a string into a representation of a type of currency.</p>
-<p>Currently only US/GB is supported is supported but more will be added with later
-updates.</p>
-</dd>
-<dt><a href="#padstr-sub-amount-side">pad(str, sub, [amount], [side])</a> ⇒ <code>string</code></dt>
-<dd><p>Pads a string with a substring on one or both sides.</p>
-</dd>
-</dl>
+<a href="#ucwordstr">ucword(str)</a>
+Capitalize the first letter of the first word.
+
+<a href="#ucwordsstr">ucwords(str)</a>
+Capitalizes the first letter of every word.
+
+<a href="#lcwordstr">lcword(str)</a>
+Make the first letter of the first word lowercase.
+
+<a href="#lcwordsstr">lcwords(str)</a>
+Make the first letters of each word lowercase.
+
+<a href="#wordwrapstr">wordwrap(str)</a>
+Wraps a string to a given number of characters.
+
+<a href="#reversestr">reverse(str)</a>
+Reverses a string.
+
+<a href="#ltrimstr">ltrim(str)</a>
+Trim all whitespace from the beginning of a string.
+
+<a href="#rtrimstr">rtrim(str)</a>
+Trim all whitespace from the end of a string.
+
+<a href="#moneyamount-locale">money(amount, [locale])</a>
+Formats a string into a representation of a type of currency.
+Currently only US/GB is supported is supported but more will be added with later
+updates.
+
+<a href="#padstr-sub-amount-side">pad(str, sub, [amount], [side])</a>
+Pads a string with a substring on one or both sides.
 
 ## API
 
 #### **Conversion Methods**
 
-### bin2Hex(bin)
+#### bin2Hex(bin)
 Converts a binary string to hexadecimal.
 
 **Returns**: <code>string</code> - Returns the hexadecimal representation of the binary string.  
@@ -108,7 +105,7 @@ Converts a binary string to hexadecimal.
 | --- | --- | --- |
 | bin | <code>string</code> | The binary string to convert to hexadecimal. |
 
-### hex2Bin(hex)
+#### hex2Bin(hex)
 Converts a hexadecimal to a binary string.
 
 **Returns**: <code>string</code> - Returns the binary representation of the hexadecimal value.  
@@ -120,7 +117,7 @@ Converts a hexadecimal to a binary string.
 
 #### **Search Methods**
 
-### count(haystack, needle)
+#### count(haystack, needle)
 Count the number of occurances that a substring is found
 in a string.
 
@@ -132,7 +129,7 @@ in a string.
 | haystack | <code>string</code> | The string to search through. |
 | needle | <code>string</code> | The substring to search for. |
 
-### countChars(str)
+#### countChars(str)
 Counts the number of times each character appears in the string.
 
 **Returns**: <code>Object</code> - Returns an object with each key being a character and the value being its count.  
@@ -142,7 +139,7 @@ Counts the number of times each character appears in the string.
 | --- | --- | --- |
 | str | <code>string</code> | The string to count characters of. |
 
-### nthIndexOf(str, sub, occurance)
+#### nthIndexOf(str, sub, occurance)
 Find the position of the nth occurance of a substring in a string.
 
 **Returns**: <code>number</code> - Returns the index of the substring.  
@@ -154,7 +151,7 @@ Find the position of the nth occurance of a substring in a string.
 | sub | <code>string</code> | The substring to searh for. |
 | occurance | <code>number</code> | Determines which occurance of the substring will be returned. |
 
-### levenshtein(str1, str2)
+#### levenshtein(str1, str2)
 Calculates the Levenshtein distance between two strings.
 
 Reference: https://gist.github.com/andrei-m/982927
@@ -169,7 +166,7 @@ Reference: https://gist.github.com/andrei-m/982927
 
 #### **Transform Methods**
 
-### ucword(str)
+#### ucword(str)
 Capitalize the first letter of the first word.
 
 **Returns**: <code>string</code> - Returns the modified string.  
@@ -179,7 +176,7 @@ Capitalize the first letter of the first word.
 | --- | --- | --- |
 | str | <code>string</code> | The string to capitalize. |
 
-### ucwords(str)
+#### ucwords(str)
 Capitalizes the first letter of every word.
 
 **Returns**: <code>string</code> - Returns the capitalized string.  
@@ -189,7 +186,7 @@ Capitalizes the first letter of every word.
 | --- | --- | --- |
 | str | <code>string</code> | The string to capitalize. |
 
-### lcword(str)
+#### lcword(str)
 Make the first letter of the first word lowercase.
 
 **Returns**: <code>string</code> - Returns the modified string.  
@@ -199,7 +196,7 @@ Make the first letter of the first word lowercase.
 | --- | --- | --- |
 | str | <code>string</code> | The string to modify. |
 
-### lcwords(str)
+#### lcwords(str)
 Make the first letters of each word lowercase.
 
 **Returns**: <code>string</code> - Returns the modified string.  
@@ -209,7 +206,7 @@ Make the first letters of each word lowercase.
 | --- | --- | --- |
 | str | <code>string</code> | The string to modify. |
 
-### wordwrap(str)
+#### wordwrap(str)
 Wraps a string to a given number of characters.
 
 **Returns**: <code>string</code> - Returns the wrapped string.  
@@ -219,7 +216,7 @@ Wraps a string to a given number of characters.
 | --- | --- | --- |
 | str | <code>string</code> | The string to wrap. |
 
-### reverse(str)
+#### reverse(str)
 Reverses a string.
 
 **Returns**: <code>string</code> - Returns the reversed string.  
@@ -229,7 +226,7 @@ Reverses a string.
 | --- | --- | --- |
 | str | <code>string</code> | The string to reverse. |
 
-### ltrim(str)
+#### ltrim(str)
 Trim all whitespace from the beginning of a string.
 
 **Returns**: <code>string</code> - Returns the string without whitespace at the beginning.  
@@ -239,7 +236,7 @@ Trim all whitespace from the beginning of a string.
 | --- | --- | --- |
 | str | <code>string</code> | The string to remove whitespace from. |
 
-### rtrim(str)
+#### rtrim(str)
 Trim all whitespace from the end of a string.
 
 **Returns**: <code>string</code> - Returns the string without whitespace at the end.  
@@ -249,7 +246,7 @@ Trim all whitespace from the end of a string.
 | --- | --- | --- |
 | str | <code>string</code> | The string to remove whitespace from. |
 
-### money(amount, locale)
+#### money(amount, locale)
 Formats a string into a representation of a type of currency.
 
 Currently only US/GB is supported is supported but more will be added with later
@@ -263,7 +260,7 @@ updates.
 | amount | <code>string</code> \| <code>number</code> |  | The string or number that represents the money amount. |
 | [locale] | <code>string</code> | <code>&quot;&#x27;US&#x27;&quot;</code> | The locale to use to format the currency. |
 
-### pad(str, sub, amount, side)
+#### pad(str, sub, amount, side)
 Pads a string with a substring on one or both sides.
 
 **Returns**: <code>string</code> - Returns the padded string.  
