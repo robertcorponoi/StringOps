@@ -35,7 +35,7 @@ import { ltrim, ucwords, nthIndexOf } from './path/to/stringops.js';
 
 A breakdown of all of the API can be found
 
-### **Conversion Functions**
+#### **Conversion Functions**
 
 <dl>
 <dt><a href="#bin2Hexbin">bin2Hex(bin)</a> ⇒ <code>string</code></dt>
@@ -45,7 +45,7 @@ A breakdown of all of the API can be found
 <dd><p>Converts a hexadecimal to a binary string.</p>
 </dd>
 
-### **Search/Find Functions**
+#### **Search/Find Functions**
 <dt><a href="#counthaystack-needle">count(haystack, needle)</a> ⇒ <code>number</code></dt>
 <dd><p>Count the number of occurances that a substring is found
 in a string.</p>
@@ -61,7 +61,7 @@ in a string.</p>
 <p>Reference: <a href="https://gist.github.com/andrei-m/982927">https://gist.github.com/andrei-m/982927</a></p>
 </dd>
 
-### **Transform Functions**
+#### **Transform Functions**
 <dt><a href="#ucwordstr">ucword(str)</a> ⇒ <code>string</code></dt>
 <dd><p>Capitalize the first letter of the first word.</p>
 </dd>
@@ -98,7 +98,7 @@ updates.</p>
 
 ## API
 
-### **Conversion Methods**
+#### **Conversion Methods**
 
 ### bin2Hex(bin)
 Converts a binary string to hexadecimal.
@@ -120,7 +120,7 @@ Converts a hexadecimal to a binary string.
 | --- | --- | --- |
 | hex | <code>string</code> | The hexademical value to convert to binary. |
 
-### **Search Methods**
+#### **Search Methods**
 
 ### count(haystack, needle)
 Count the number of occurances that a substring is found
@@ -169,7 +169,7 @@ Reference: https://gist.github.com/andrei-m/982927
 | str1 | <code>string</code> | The first string. |
 | str2 | <code>string</code> | The second string. |
 
-### **Transform Methods**
+#### **Transform Methods**
 
 ### ucword(str)
 Capitalize the first letter of the first word.
