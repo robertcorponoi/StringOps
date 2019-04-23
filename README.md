@@ -35,7 +35,7 @@ import { ltrim, ucwords, nthIndexOf } from './path/to/stringops.js';
 
 A breakdown of all of the API can be found
 
-### **Conversion Functions**
+#### **Conversion Functions**
 
 <a href="#bin2Hexbin">bin2Hex(bin)</a>
 Converts a binary string to hexadecimal.
@@ -45,7 +45,7 @@ Converts a hexadecimal to a binary string.
 
 ---
 
-### **Search/Find Functions**
+#### **Search/Find Functions**
 <a href="#counthaystack-needle">count(haystack, needle)</a>
 Count the number of occurances that a substring is found
 in a string.
@@ -61,7 +61,7 @@ Calculates the Levenshtein distance between two strings.
 
 ---
 
-### **Transform Functions**
+#### **Transform Functions**
 <a href="#ucwordstr">ucword(str)</a>
 Capitalize the first letter of the first word.
 
@@ -96,7 +96,7 @@ Pads a string with a substring on one or both sides.
 
 ## API
 
-#### **Conversion Methods**
+### **Conversion Methods**
 
 #### bin2Hex(bin)
 Converts a binary string to hexadecimal.
@@ -118,7 +118,9 @@ Converts a hexadecimal to a binary string.
 | --- | --- | --- |
 | hex | <code>string</code> | The hexademical value to convert to binary. |
 
-#### **Search Methods**
+---
+
+### **Search Methods**
 
 #### count(haystack, needle)
 Count the number of occurances that a substring is found
@@ -167,7 +169,9 @@ Reference: https://gist.github.com/andrei-m/982927
 | str1 | <code>string</code> | The first string. |
 | str2 | <code>string</code> | The second string. |
 
-#### **Transform Methods**
+---
+
+### **Transform Methods**
 
 #### ucword(str)
 Capitalize the first letter of the first word.
