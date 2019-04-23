@@ -37,13 +37,11 @@ A breakdown of all of the API can be found
 
 #### **Conversion Functions**
 
-<dl>
-<dt><a href="#bin2Hexbin">bin2Hex(bin)</a> ⇒ <code>string</code></dt>
-<dd><p>Converts a binary string to hexadecimal.</p>
-</dd>
-<dt><a href="#hex2Binhex">hex2Bin(hex)</a> ⇒ <code>string</code></dt>
-<dd><p>Converts a hexadecimal to a binary string.</p>
-</dd>
+<a href="#bin2Hexbin">bin2Hex(bin)</a>
+Converts a binary string to hexadecimal.
+
+<a href="#hex2Binhex">hex2Bin(hex)</a>
+Converts a hexadecimal to a binary string.
 
 #### **Search/Find Functions**
 <dt><a href="#counthaystack-needle">count(haystack, needle)</a> ⇒ <code>number</code></dt>
