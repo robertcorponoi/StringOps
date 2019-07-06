@@ -188,9 +188,7 @@ export function money(amount: (string | number), locale: string = 'US'): string 
  * @param {string} str The string to pad.
  * @param {string} sub The substring to pad the string with.
  * @param {number} [amount=1] The amount of times to pad the string with the substring.
- * @param {string} [side='right'] The side of the string to pad. The available options are left, right, or both. 
- *                                If both is selected then the string will be padded evenly on both sides with the right
- *                                being favored if the amount is not even.
+ * @param {string} [side='right'] The side of the string to pad. The available options are left, right, or both. If both is selected then the string will be padded evenly on both sides with the right being favored if the amount is not even.
  *
  * @returns {string} Returns the padded string.
  */
@@ -231,5 +229,20 @@ export function pad(str: string, sub: string, amount: number = 1, side: string =
   }
 
   return padded;
+
+}
+
+/**
+ * Inserts HTML line breaks before all newlines in a string.
+ * 
+ * @version 0.1.0
+ * 
+ * @param {string} str The string to format with line breaks.
+ * 
+ * @returns {string} Returns the formatted string.
+ */
+export function nl2br(str: string): string {
+
+  return str.replace(/(\\r|\\n|\\r\\n|\\n\\r)/g, '<br />');
 
 }

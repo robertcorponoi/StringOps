@@ -10,6 +10,12 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @param {string} bin The binary string to convert to hexadecimal.
  *
  * @returns {string} Returns the hexadecimal representation of the binary string.
+ *
+ * @example
+ *
+ * const hex = stringops.bin2Hex('1100110111101010110111');
+ *
+ * console.log(hex); // '337AB7'
  */
 
 function bin2Hex(bin) {
@@ -23,6 +29,12 @@ function bin2Hex(bin) {
  * @param {string} hex The hexademical value to convert to binary.
  *
  * @returns {string} Returns the binary representation of the hexadecimal value.
+ *
+ * @example
+ *
+ * const bin = stringops.hex2Bin('337ab7');
+ *
+ * console.log(bin); // '1100110111101010110111'
  */
 
 function hex2Bin(hex) {
@@ -327,9 +339,7 @@ function money(amount) {
  * @param {string} str The string to pad.
  * @param {string} sub The substring to pad the string with.
  * @param {number} [amount=1] The amount of times to pad the string with the substring.
- * @param {string} [side='right'] The side of the string to pad. The available options are left, right, or both. 
- *                                If both is selected then the string will be padded evenly on both sides with the right
- *                                being favored if the amount is not even.
+ * @param {string} [side='right'] The side of the string to pad. The available options are left, right, or both. If both is selected then the string will be padded evenly on both sides with the right being favored if the amount is not even.
  *
  * @returns {string} Returns the padded string.
  */
@@ -366,6 +376,19 @@ function pad(str, sub) {
 
   return padded;
 }
+/**
+ * Inserts HTML line breaks before all newlines in a string.
+ * 
+ * @version 0.1.0
+ * 
+ * @param {string} str The string to format with line breaks.
+ * 
+ * @returns {string} Returns the formatted string.
+ */
+
+function nl2br(str) {
+  return str.replace(/(\\r|\\n|\\r\\n|\\n\\r)/g, '<br />');
+}
 
 exports.bin2Hex = bin2Hex;
 exports.count = count;
@@ -376,6 +399,7 @@ exports.lcwords = lcwords;
 exports.levenshtein = levenshtein;
 exports.ltrim = ltrim;
 exports.money = money;
+exports.nl2br = nl2br;
 exports.nthIndexOf = nthIndexOf;
 exports.pad = pad;
 exports.reverse = reverse;

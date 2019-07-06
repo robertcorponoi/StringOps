@@ -1,0 +1,10 @@
+# 0.2.0 2019-07-05
+===========================
+* [FEATURE] Added nl2br function that replaces line breaks with <br /> tags.
+* [HOTFIX] Updated out of date dependencies that cause npm audit to throw warnings.
+* [FEATURE] Updated any other packages that could be updated.
+* [FEATURE] Added CHANGELOG
+
+# 0.1.0 2019-07-05
+===========================
+* [FEATURE] Initial release

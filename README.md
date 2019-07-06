@@ -280,3 +280,14 @@ Pads a string with a substring on one or both sides.
 | amount | <code>number</code> | <code>1</code> | The amount of times to pad the string with the substring. |
 | side | <code>string</code> | <code>&quot;&#x27;right&#x27;&quot;</code> | The side of the string to pad. The available options are left, right, or both.                                 If both is selected then the string will be padded evenly on both sides with the right                                being favored if the amount is not even. |
 
+#### nl2br(str)
+Replaces line endings in a string with `<br />` tags.
+
+**Returns**: <code>string</code> - Returns the formatted string.  
+**Version**: 0.1.0  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| str | <code>string</code> |  | The string to format. |
+
+
