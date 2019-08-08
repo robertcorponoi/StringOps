@@ -1,121 +1,116 @@
 'use strict'
 
-const chai = require('chai');
-
+const test = require('ava');
 const stringops = require('../index');
 
-describe('Transforming strings', () => {
+test(`ucword: should take the string 'hello there world!' and return 'Hello there world!'`, t => {
 
-  it(`ucword: should take the string 'hello there world!' and return 'Hello there world!'`, () => {
+  const result = stringops.ucword('hello there world!');
 
-    const result = stringops.ucword('hello there world!');
+  t.is(result, 'Hello there world!');
 
-    chai.expect(result).to.equal('Hello there world!');
+});
 
-  });
+test(`ucwords: should take the string 'hello there world!' and return 'Hello There World!'`, t => {
 
-  it(`ucwords: should take the string 'hello there world!' and return 'Hello There World!'`, () => {
+  const result = stringops.ucwords('hello there world!');
 
-    const result = stringops.ucwords('hello there world!');
+  t.is(result, 'Hello There World!');
 
-    chai.expect(result).to.equal('Hello There World!');
+});
 
-  });
+test(`lcword: should take the string 'Hello There World!' and return 'hello There World!'`, t => {
 
-  it(`lcword: should take the string 'Hello There World!' and return 'hello There World!'`, () => {
+  const result = stringops.lcword('Hello There World!');
 
-    const result = stringops.lcword('Hello There World!');
+  t.is(result, 'hello There World!');
 
-    chai.expect(result).to.equal('hello There World!');
+});
 
-  });
+test(`lcwords: should take the string 'Hello There World!' and return 'hello there world!'`, t => {
 
-  it(`lcwords: should take the string 'Hello There World!' and return 'hello there world!'`, () => {
+  const result = stringops.lcwords('Hello There World!');
 
-    const result = stringops.lcwords('Hello There World!');
+  t.is(result, 'hello there world!');
 
-    chai.expect(result).to.equal('hello there world!');
+});
 
-  });
+test(`wordwrap: should take the string 'Hello there world!' and return 'Hello there\nworld!`, t => {
 
-  it(`wordwrap: should take the string 'Hello there world!' and return 'Hello there\nworld!`, () => {
+  const result = stringops.wordwrap('Hello there world!', 11);
 
-    const result = stringops.wordwrap('Hello there world!', 11);
+  t.is(result.indexOf('\n'), 12);
 
-    chai.expect(result.indexOf('\n')).to.equal(12);
+});
 
-  });
+test(`reverse: should take the string 'Hello World!' and return '!dlroW olleH'`, t => {
 
-  it(`reverse: should take the string 'Hello World!' and return '!dlroW olleH'`, () => {
+  const reversed = stringops.reverse('Hello World!');
 
-    const reversed = stringops.reverse('Hello World!');
+  t.is(reversed, '!dlroW olleH');
 
-    chai.expect(reversed).to.equal('!dlroW olleH');
+});
 
-  });
+test(`ltrim: should remove all whitespace from the front of the string`, t => {
 
-  it(`ltrim: should remove all whitespace from the front of the string`, () => {
+  const trimmed = stringops.ltrim('   Hello World!');
 
-    const trimmed = stringops.ltrim('   Hello World!');
+  t.is(trimmed, 'Hello World!');
 
-    chai.expect(trimmed).to.equal('Hello World!');
+});
 
-  });
+test(`rtrim: should remove all whitespace from the end of the string`, t => {
 
-  it(`rtrim: should remove all whitespace from the end of the string`, () => {
+  const trimmed = stringops.rtrim('Hello World!   ');
 
-    const trimmed = stringops.rtrim('Hello World!   ');
+  t.is(trimmed, 'Hello World!');
 
-    chai.expect(trimmed).to.equal('Hello World!');
+});
 
-  });
+test(`money: should convert the string '12345.67' to '$12,345.67'`, t => {
 
-  it(`money: should convert the string '12345.67' to '$12,345.67'`, () => {
+  const money = stringops.money('12345.67');
 
-    const money = stringops.money('12345.67');
+  t.is(money, '$12,345.67');
 
-    chai.expect(money).to.equal('$12,345.67');
+});
 
-  });
+test(`money: should convert the number '1234567' to '$1,234,567'`, t => {
 
-  it(`money: should convert the number '1234567' to '$1,234,567'`, () => {
+  const money = stringops.money(1234567);
 
-    const money = stringops.money(1234567);
+  t.is(money, '$1,234,567');
 
-    chai.expect(money).to.equal('$1,234,567');
+});
 
-  });
+test(`pad: should pad the left side of the string`, t => {
 
-  it(`pad: should pad the left side of the string`, () => {
+  const pad = stringops.pad('Hello World!', '=-', 3, 'left');
 
-    const pad = stringops.pad('Hello World!', '=-', 3, 'left');
+  t.is(pad, '=-=-=-Hello World!');
 
-    chai.expect(pad).to.equal('=-=-=-Hello World!');
+});
 
-  });
+test(`pad: should pad the right side of the string`, t => {
 
-  it(`pad: should pad the right side of the string`, () => {
+  const pad = stringops.pad('Hello World!', 'a*b', 5);
 
-    const pad = stringops.pad('Hello World!', 'a*b', 5);
+  t.is(pad, 'Hello World!a*ba*ba*ba*ba*b');
 
-    chai.expect(pad).to.equal('Hello World!a*ba*ba*ba*ba*b');
+});
 
-  });
+test(`pad: should pad the both sides of the string an even amount`, t => {
 
-  it(`pad: should pad the both sides of the string an even amount`, () => {
+  const pad = stringops.pad('Hello World!', '=-', 4, 'both');
 
-    const pad = stringops.pad('Hello World!', '=-', 4, 'both');
+  t.is(pad, '=-=-Hello World!=-=-');
 
-    chai.expect(pad).to.equal('=-=-Hello World!=-=-');
+});
 
-  });
+test(`pad: should pad the both sides of the string an uneven amount`, t => {
 
-  it(`pad: should pad the both sides of the string an uneven amount`, () => {
+  const pad = stringops.pad('Hello World!', '=-', 5, 'both');
 
-    const pad = stringops.pad('Hello World!', '=-', 5, 'both');
-
-    chai.expect(pad).to.equal('=-=-Hello World!=-=-=-');
-
-  });
+  t.is(pad, '=-=-Hello World!=-=-=-');
 
 });

@@ -1,11 +1,11 @@
 {
   "name": "stringops",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "String functions you'll wish you had before.",
   "main": "index.js",
   "module": "stringops.js",
   "scripts": {
-    "test": "mocha",
+    "test": "ava",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "build": "npm run build:types && npm run build:js",
@@ -41,8 +41,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.0",
+    "ava": "^2.2.0",
     "rollup": "^1.19.4",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.2",
