@@ -1,6 +1,6 @@
 {
   "name": "stringops",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "String functions you'll wish you had before.",
   "main": "index.js",
   "module": "stringops.js",
