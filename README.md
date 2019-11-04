@@ -10,10 +10,12 @@ If using ES6 imports then you can just import the methods you need to save space
 
 <div align="center">
 
-[![NPM version](https://img.shields.io/npm/v/stringops.svg?style=flat)](https://www.npmjs.com/package/stringops)
-[![Known Vulnerabilities](https://snyk.io/test/github/robertcorponoi/stringops/badge.svg)](https://snyk.io/test/github/robertcorponoi/stringops)
-[![NPM downloads](https://img.shields.io/npm/dm/stringops.svg?style=flat)](https://www.npmjs.com/package/stringops)
-[![Gitter](https://badges.gitter.im/gitterHQ/gitter.svg)](https://gitter.im/robertcorponoi)
+  [![NPM version](https://img.shields.io/npm/v/stringops.svg?style=flat)](https://www.npmjs.com/package/stringops)
+  [![Known Vulnerabilities](https://snyk.io/test/github/robertcorponoi/stringops/badge.svg)](https://snyk.io/test/github/robertcorponoi/stringops)
+  [![NPM downloads](https://img.shields.io/npm/dm/stringops.svg?style=flat)](https://www.npmjs.com/package/stringops)
+  <a href="https://badge.fury.io/js/stringops"><img src="https://img.shields.io/github/issues/robertcorponoi/stringops.svg" alt="issues" height="18"></a>
+  <a href="https://badge.fury.io/js/stringops"><img src="https://img.shields.io/github/license/robertcorponoi/stringops.svg" alt="license" height="18"></a>
+  [![Gitter](https://badges.gitter.im/gitterHQ/gitter.svg)](https://gitter.im/robertcorponoi)
 
 </div>
 
@@ -23,7 +25,7 @@ StringOps is available as both a Node.js package available through NPM and as an
 
 To download StringOps through NPM, use the following command:
 
-```shell
+```bash
 $ npm install stringops
 ```
 From here you can either require the package:
@@ -35,6 +37,10 @@ const stringops = require('stringops');
 Or if you're developing in an environment that allows the use of imports, you can use:
 
 ```js
+// Webpack
+import * as stringoops from 'stringops';
+
+// Browser
 import * as stringops from './path/to/stringops.js';
 ```
 

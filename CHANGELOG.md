@@ -1,3 +1,8 @@
+0.2.5 2019-11-03
+===========================
+* [FEATURE] Updated dependencies to their latest versions.
+* [MISC] Added more badges to the README.
+
 0.2.4 2019-08-07
 ===========================
 * [FEATURE] Reworked documentation to split different types of string methods into different files.
