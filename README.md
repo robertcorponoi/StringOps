@@ -4,14 +4,19 @@
 
 </div>
 
+<div align="center">
+
 StringOps is made to fill in the gaps of String methods in JavaScript that currently exist in other languages but not yet in JavaScript.
 
 If using ES6 imports then you can just import the methods you need to save space.
+
+</div>
 
 <div align="center">
 
   [![NPM version](https://img.shields.io/npm/v/stringops.svg?style=flat)](https://www.npmjs.com/package/stringops)
   [![Known Vulnerabilities](https://snyk.io/test/github/robertcorponoi/stringops/badge.svg)](https://snyk.io/test/github/robertcorponoi/stringops)
+  ![npm](https://img.shields.io/npm/dt/stringops)
   [![NPM downloads](https://img.shields.io/npm/dm/stringops.svg?style=flat)](https://www.npmjs.com/package/stringops)
   <a href="https://badge.fury.io/js/stringops"><img src="https://img.shields.io/github/issues/robertcorponoi/stringops.svg" alt="issues" height="18"></a>
   <a href="https://badge.fury.io/js/stringops"><img src="https://img.shields.io/github/license/robertcorponoi/stringops.svg" alt="license" height="18"></a>
