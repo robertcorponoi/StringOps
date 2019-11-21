@@ -14,7 +14,6 @@ export default {
   external: [],
 
   plugins: [
-
     resolve({ extensions }),
 
     commonjs(),
