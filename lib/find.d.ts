@@ -62,3 +62,23 @@ export declare function nthIndexOf(str: string, sub: string, occurance: number):
  * const lev = stringops.levenshtein(str1, str2); // 3
  */
 export declare function levenshtein(str1: string, str2: string): number;
+/**
+ * Checks to see if all of the characters in the text are alphanumeric.
+ *
+ * Source: Python - isalnum
+ *
+ * @param {string} str The string to search.
+ *
+ * @returns {boolean} Returns true if all of the characters in the text are alphanumeric or false otherwise.
+ */
+export declare function isAlnum(str: string): boolean;
+/**
+ * Checks to see if all of the characters in the text are letters.
+ *
+ * Source: Python - isalpha
+ *
+ * @param {string} str The string to search.
+ *
+ * @returns {boolean} Returns true if all of the characters in the text are letters or false otherwise.
+ */
+export declare function isAlpha(str: string): boolean;

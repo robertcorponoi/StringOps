@@ -145,6 +145,8 @@ export declare function pad(str: string, sub: string, amount?: number, side?: st
 /**
  * Inserts HTML line breaks before all newlines in a string.
  *
+ * Souce: PHP
+ *
  * @param {string} str The string to format with line breaks.
  *
  * @returns {string} Returns the formatted string.
@@ -156,3 +158,17 @@ export declare function pad(str: string, sub: string, amount?: number, side?: st
  * const breaks = stringops.nl2br(text); // 'Hello <br/>World'
  */
 export declare function nl2br(str: string): string;
+/**
+ * Makes a string take up a certain amount of characters with the provided string in the center.
+ *
+ * This is similar to `pad` above but is based off python's center.
+ *
+ * Source: Python - center
+ *
+ * @param {string} str The string to center.
+ * @param {number} length The length of the returned string, including the provided string.
+ * @param {string} [char=' '] The character to fill the missing space on each side.
+ *
+ * @returns {string} Returns the centered string.
+ */
+export declare function center(str: string, length: number, char?: string): string;

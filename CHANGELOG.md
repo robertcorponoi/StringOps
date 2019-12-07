@@ -1,3 +1,8 @@
+1.0.0 / 2019-12-07
+===========================
+* [FEATURE] Added center, isAlnum, and isAlpha string methods from Python.
+* [MISC] Updated dependencies to their latest versions.
+
 0.2.6 / 2019-11-20
 ===========================
 * [MISC] Updated dependencies to their latest versions.

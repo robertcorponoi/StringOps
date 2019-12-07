@@ -164,3 +164,53 @@ export function levenshtein(str1: string, str2: string): number {
   return table[str2.length][str1.length];
 
 }
+
+/**
+ * Checks to see if all of the characters in the text are alphanumeric.
+ * 
+ * Source: Python - isalnum
+ * 
+ * @param {string} str The string to search.
+ * 
+ * @returns {boolean} Returns true if all of the characters in the text are alphanumeric or false otherwise.
+ */
+export function isAlnum(str: string): boolean {
+
+  const allowedCharacters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  for (let i = 0; i < str.length; ++i) {
+
+    const char: string = str.charAt(i);
+
+    if (allowedCharacters.indexOf(char) < 0) return false;
+
+  }
+
+  return true;
+
+}
+
+/**
+ * Checks to see if all of the characters in the text are letters.
+ * 
+ * Source: Python - isalpha
+ * 
+ * @param {string} str The string to search.
+ * 
+ * @returns {boolean} Returns true if all of the characters in the text are letters or false otherwise.
+ */
+export function isAlpha(str: string): boolean {
+
+  const allowedCharacters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+
+  for (let i = 0; i < str.length; ++i) {
+
+    const char: string = str.charAt(i);
+
+    if (allowedCharacters.indexOf(char) < 0) return false;
+
+  }
+
+  return true;
+
+}

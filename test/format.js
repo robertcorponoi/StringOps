@@ -114,3 +114,11 @@ test(`pad: should pad the both sides of the string an uneven amount`, t => {
   t.is(pad, '=-=-Hello World!=-=-=-');
 
 });
+
+test(`center: should center a string with spaces`, t => {
+
+  const centered = stringops.center('Hello World!', 20, '-');
+
+  t.is(centered, '----Hello World!----');
+
+});

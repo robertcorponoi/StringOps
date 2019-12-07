@@ -59,3 +59,35 @@ test('levenshtein: it should return the distance between Saturday and Sunday whi
   t.is(lev, 3);
 
 });
+
+test('isAlnum: it should return true indicating that the string was alphanumeric', t => {
+
+  const isAlnum = stringops.isAlnum('HelloWorld1');
+
+  t.is(isAlnum, true);
+
+});
+
+test('isAlnum: it should return false indicating that the string was not alphanumeric', t => {
+
+  const isAlnum = stringops.isAlnum('HelloWorld1#');
+
+  t.is(isAlnum, false);
+
+});
+
+test('isAlpha: it should return true indicating that the string has only letters', t => {
+
+  const isAlpha = stringops.isAlpha('HelloWorld');
+
+  t.is(isAlpha, true);
+
+});
+
+test('isAlpha: it should return false indicating that the string more than just letters', t => {
+
+  const isAlpha = stringops.isAlpha('HelloWorld1');
+
+  t.is(isAlpha, false);
+
+});

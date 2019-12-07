@@ -182,6 +182,48 @@ function levenshtein(str1, str2) {
 
   return table[str2.length][str1.length];
 }
+/**
+ * Checks to see if all of the characters in the text are alphanumeric.
+ * 
+ * Source: Python - isalnum
+ * 
+ * @param {string} str The string to search.
+ * 
+ * @returns {boolean} Returns true if all of the characters in the text are alphanumeric or false otherwise.
+ */
+
+function isAlnum(str) {
+  var allowedCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  for (var i = 0; i < str.length; ++i) {
+    var _char = str.charAt(i);
+
+    if (allowedCharacters.indexOf(_char) < 0) return false;
+  }
+
+  return true;
+}
+/**
+ * Checks to see if all of the characters in the text are letters.
+ * 
+ * Source: Python - isalpha
+ * 
+ * @param {string} str The string to search.
+ * 
+ * @returns {boolean} Returns true if all of the characters in the text are letters or false otherwise.
+ */
+
+function isAlpha(str) {
+  var allowedCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+
+  for (var i = 0; i < str.length; ++i) {
+    var _char2 = str.charAt(i);
+
+    if (allowedCharacters.indexOf(_char2) < 0) return false;
+  }
+
+  return true;
+}
 
 /**
  * Capitalize the first letter of the first word.
@@ -427,6 +469,8 @@ function pad(str, sub) {
 /**
  * Inserts HTML line breaks before all newlines in a string.
  * 
+ * Souce: PHP
+ * 
  * @param {string} str The string to format with line breaks.
  * 
  * @returns {string} Returns the formatted string.
@@ -441,11 +485,36 @@ function pad(str, sub) {
 function nl2br(str) {
   return str.replace(/(\\r|\\n|\\r\\n|\\n\\r)/g, '<br />');
 }
+/**
+ * Makes a string take up a certain amount of characters with the provided string in the center.
+ * 
+ * This is similar to `pad` above but is based off python's center.
+ * 
+ * Source: Python - center
+ * 
+ * @param {string} str The string to center.
+ * @param {number} length The length of the returned string, including the provided string.
+ * @param {string} [char=' '] The character to fill the missing space on each side.
+ * 
+ * @returns {string} Returns the centered string.
+ */
+
+function center(str, length) {
+  var _char = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ' ';
+
+  var strLength = str.length;
+  if (strLength >= length) return str;
+  var charsOnEachSide = length - strLength;
+  return pad(str, _char, charsOnEachSide, 'both');
+}
 
 exports.bin2Hex = bin2Hex;
+exports.center = center;
 exports.count = count;
 exports.countChars = countChars;
 exports.hex2Bin = hex2Bin;
+exports.isAlnum = isAlnum;
+exports.isAlpha = isAlpha;
 exports.lcword = lcword;
 exports.lcwords = lcwords;
 exports.levenshtein = levenshtein;
