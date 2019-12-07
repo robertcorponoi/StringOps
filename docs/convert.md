@@ -4,7 +4,6 @@
 Converts a binary string to hexadecimal.
 
 **Returns**: <code>string</code> - Returns the hexadecimal representation of the binary string.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -14,7 +13,6 @@ Converts a binary string to hexadecimal.
 Converts a hexadecimal to a binary string.
 
 **Returns**: <code>string</code> - Returns the binary representation of the hexadecimal value.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |

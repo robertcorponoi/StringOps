@@ -4,7 +4,6 @@
 Capitalize the first letter of the first word.
 
 **Returns**: <code>string</code> - Returns the modified string.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -14,7 +13,6 @@ Capitalize the first letter of the first word.
 Capitalizes the first letter of every word.
 
 **Returns**: <code>string</code> - Returns the capitalized string.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -24,7 +22,6 @@ Capitalizes the first letter of every word.
 Make the first letter of the first word lowercase.
 
 **Returns**: <code>string</code> - Returns the modified string.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -34,7 +31,6 @@ Make the first letter of the first word lowercase.
 Make the first letters of each word lowercase.
 
 **Returns**: <code>string</code> - Returns the modified string.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -44,7 +40,6 @@ Make the first letters of each word lowercase.
 Wraps a string to a given number of characters.
 
 **Returns**: <code>string</code> - Returns the wrapped string.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -54,7 +49,6 @@ Wraps a string to a given number of characters.
 Reverses a string.
 
 **Returns**: <code>string</code> - Returns the reversed string.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -64,7 +58,6 @@ Reverses a string.
 Trim all whitespace from the beginning of a string.
 
 **Returns**: <code>string</code> - Returns the string without whitespace at the beginning.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -74,7 +67,6 @@ Trim all whitespace from the beginning of a string.
 Trim all whitespace from the end of a string.
 
 **Returns**: <code>string</code> - Returns the string without whitespace at the end.  
-**Version**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -86,8 +78,7 @@ Formats a string into a representation of a type of currency.
 Currently only US/GB is supported is supported but more will be added with later
 updates.
 
-**Returns**: <code>string</code> - Returns the amount in a string representing that locale's currency.  
-**Version**: 0.1.0  
+**Returns**: <code>string</code> - Returns the amount in a string representing that locale's currency.   
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -98,7 +89,6 @@ updates.
 Pads a string with a substring on one or both sides.
 
 **Returns**: <code>string</code> - Returns the padded string.  
-**Version**: 0.1.0  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -111,8 +101,22 @@ Pads a string with a substring on one or both sides.
 Replaces line endings in a string with `<br />` tags.
 
 **Returns**: <code>string</code> - Returns the formatted string.  
-**Version**: 0.1.0  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | str | <code>string</code> |  | The string to format. |
+
+#### center(str, length, char = ' ')
+Makes a string take up a certain amount of characters with the provided string in the center.
+
+This is similar to `pad` above but is based off python's center.
+
+Source: Python - center
+
+**Returns**: <code>string</code> - Returns the centered string.
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| str | <code>string</code> |  | The string to center. |
+| length | <code>number</code> |  | The length of the returned string, including the provided string. |
+| char | <code>string</code> | ' ' | The character to fill the missing space on each side. |
