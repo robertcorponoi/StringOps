@@ -91,6 +91,12 @@ Find the position of the nth occurance of a substring in a string.
 <a href="./docs/search.md#levenshteinstr1-str2">levenshtein(str1, str2)</a>
 Calculates the Levenshtein distance between two strings.
 
+<a href="./docs/search.md#isAlnum">isAlnum(str)</a>
+hecks to see if all of the characters in the text are alphanumeric.
+
+<a href="./docs/search.md#isAlpha">isAlpha(str)</a>
+Checks to see if all of the characters in the text are letters.
+
 ---
 
 #### **Transform Functions**
@@ -126,10 +132,13 @@ updates.
 <a href="./docs/transform.md#padstr-sub-amount-side">pad(str, sub, [amount], [side])</a>
 Pads a string with a substring on one or both sides.
 
+<a href="./docs/transform.md#center">center(str, length, [char])</a>
+Makes a string take up a certain amount of characters with the provided string in the center.
+
 ## **Tests**
 
 To run all of the available tests for stringops use:
 
-```shell
+```bash
 $ npm run test
 ```
