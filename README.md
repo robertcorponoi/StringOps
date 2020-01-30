@@ -55,6 +55,12 @@ Or even further you can import just the methods you need:
 import { ltrim, ucwords, nthIndexOf } from './path/to/stringops.js';
 ```
 
+In the browser you can also use the unpkg script like so:
+
+```html
+<script type="module" src="https://unpkg.com/stringops@latest/stringops.js"></script>
+```
+
 ## **Documentation**
 
 Please see the [files in the `docs` directory](./docs):
@@ -134,6 +140,9 @@ Pads a string with a substring on one or both sides.
 
 <a href="./docs/transform.md#center">center(str, length, [char])</a>
 Makes a string take up a certain amount of characters with the provided string in the center.
+
+<a href="./docs/transform.md#swapcase">swapcase(str)</a>
+Swaps the case of each letter in a string.
 
 ## **Tests**
 

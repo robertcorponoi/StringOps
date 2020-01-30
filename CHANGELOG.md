@@ -1,3 +1,8 @@
+1.1.1 / 2020-01-30
+==================
+* [MISC] Added unpkg usage to README.
+* [MISC] Added link to swapcase method documentation in README.
+
 1.1.0 / 2020-01-30
 ==================
 * [FEATURE] Added `swapcase` method from Python to swap the case of each letter in a string.
