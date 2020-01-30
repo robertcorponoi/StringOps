@@ -172,3 +172,13 @@ export declare function nl2br(str: string): string;
  * @returns {string} Returns the centered string.
  */
 export declare function center(str: string, length: number, char?: string): string;
+/**
+ * Swaps the case of each letter in a string.
+ *
+ * Souce: Python - swapcase
+ *
+ * @param {string} str The string to swap cases on.
+ *
+ * @returns {string} Returns the case swapped string.
+ */
+export declare function swapcase(str: string): string;

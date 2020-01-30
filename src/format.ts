@@ -14,9 +14,7 @@
  * const ucText = stringops.ucword(text); // 'Hello';
  */
 export function ucword(str: string): string {
-
   return str.charAt(0).toUpperCase() + str.slice(1);
-
 }
 
 /**
@@ -33,13 +31,11 @@ export function ucword(str: string): string {
  * const ucWords = stringops.ucwords(text); // 'Hello World'
  */
 export function ucwords(str: string): string {
-
-  const split = str.split(' ');
+  const split: Array<string> = str.split(' ');
 
   split.forEach((o, i, a) => a[i] = a[i].charAt(0).toUpperCase() + a[i].slice(1));
 
   return split.join(' ');
-
 }
 
 /**
@@ -73,13 +69,11 @@ export function lcword(str: string): string {
  * const lcWords = stringops.lcWords(text); // 'hello world'
  */
 export function lcwords(str: string): string {
-
-  const split = str.split(' ');
+  const split: Array<string> = str.split(' ');
 
   split.forEach((o, i, a) => a[i] = a[i].charAt(0).toLowerCase() + a[i].slice(1));
 
   return split.join(' ');
-
 }
 
 /**
@@ -96,9 +90,7 @@ export function lcwords(str: string): string {
  * const wrapped = stringops.wordwrap(text, 5); // 'Hello \n World'
  */
 export function wordwrap(str: string, charNumber : number): string {
-
   return `${str.slice(0, charNumber + 1)}\n${str.slice(charNumber + 1)}`;
-
 }
 
 /**
@@ -115,17 +107,11 @@ export function wordwrap(str: string, charNumber : number): string {
  * const reverse = stringops.reverse(text); // 'dlroW olleH'
  */
 export function reverse(str: string): string {
-
   let reversed: string = '';
 
-  for (let i = str.length - 1; i >= 0; i--) {
-
-    reversed += str[i];
-
-  }
+  for (let i = str.length - 1; i >= 0; i--) reversed += str[i];
 
   return reversed;
-
 }
 
 /**
@@ -142,11 +128,9 @@ export function reverse(str: string): string {
  * const ltrim = stringops.ltrim(text); // 'Hello World'
  */
 export function ltrim(str: string): string {
-
   while (str.charAt(0) == ' ') str = str.slice(1);
 
   return str;
-
 }
 
 /**
@@ -163,11 +147,9 @@ export function ltrim(str: string): string {
  * const rtrim = stringops.rtrim(text); // 'Hello World'
  */
 export function rtrim(str: string): string {
-
   while (str.charAt(str.length - 1) == ' ') str = str.slice(0, -1);
 
   return str;
-
 }
 
 /**
@@ -187,30 +169,22 @@ export function rtrim(str: string): string {
  * const dollars = stringops.money(money); // '$5'
  */
 export function money(amount: (string | number), locale: string = 'US'): string {
+  let str: string = amount.toString();
 
-  let str = amount.toString();
-
-  let index = str.length;
+  let index: number = str.length;
 
   switch (locale) {
-
     case 'US':
       const coins = str.indexOf('.');
 
       if (coins > 0) index = coins;
 
-      for (let i = index - 3; i > 0; i -= 3) {
-
-        str = `${str.slice(0, i)},${str.slice(i)}`;
-
-      }
+      for (let i = index - 3; i > 0; i -= 3) str = `${str.slice(0, i)},${str.slice(i)}`;
 
       break;
-
   }
 
   return `$${str}`;
-
 }
 
 /**
@@ -230,43 +204,33 @@ export function money(amount: (string | number), locale: string = 'US'): string 
  * const padded = stringops.pad(text, '!', 2, 'both'); // '!!Hello World!!'
  */
 export function pad(str: string, sub: string, amount: number = 1, side: string = 'right'): string {
-
   let padded: string = '';
 
   switch (side) {
-
     case 'left':
       padded = `${sub.repeat(amount)}${str}`;
       break;
-
     case 'right':
       padded = `${str}${sub.repeat(amount)}`;
       break;
-
     case 'both':
       let padLeft: number = 0;
       let padRight: number = 0;
 
       if (amount % 2 === 0) {
-
         padLeft = amount / 2;
         padRight = amount / 2;
-
       } else {
-
         padRight = Math.round(amount / 2)
         padLeft = amount - padRight;
-
       }
 
       padded = `${sub.repeat(padLeft)}${str}${sub.repeat(padRight)}`;
 
       break;
-
   }
 
   return padded;
-
 }
 
 /**
@@ -285,9 +249,7 @@ export function pad(str: string, sub: string, amount: number = 1, side: string =
  * const breaks = stringops.nl2br(text); // 'Hello <br/>World'
  */
 export function nl2br(str: string): string {
-
   return str.replace(/(\\r|\\n|\\r\\n|\\n\\r)/g, '<br />');
-
 }
 
 /**
@@ -304,7 +266,6 @@ export function nl2br(str: string): string {
  * @returns {string} Returns the centered string.
  */
 export function center(str: string, length: number, char: string = ' '): string {
-
   const strLength: number = str.length;
 
   if (strLength >= length) return str;
@@ -312,5 +273,27 @@ export function center(str: string, length: number, char: string = ' '): string 
   const charsOnEachSide: number = length - strLength;
 
   return pad(str, char, charsOnEachSide, 'both');
+}
 
+/**
+ * Swaps the case of each letter in a string.
+ * 
+ * Souce: Python - swapcase
+ * 
+ * @param {string} str The string to swap cases on.
+ * 
+ * @returns {string} Returns the case swapped string.
+ */
+export function swapcase(str: string): string {
+  const characters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+
+  let swapped: string = '';
+
+  for (let char of str) {
+    if (!characters.includes(char)) swapped += char;
+    else if (char === char.toUpperCase()) swapped += char.toLowerCase();
+    else swapped += char.toUpperCase();
+  }
+
+  return swapped;
 }

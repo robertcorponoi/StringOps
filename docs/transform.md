@@ -120,3 +120,14 @@ Source: Python - center
 | str | <code>string</code> |  | The string to center. |
 | length | <code>number</code> |  | The length of the returned string, including the provided string. |
 | char | <code>string</code> | ' ' | The character to fill the missing space on each side. |
+
+#### swapcase(str)
+Swaps the case of each letter in a string.
+
+Source: Python - swapcase
+
+**Returns**: <code>string</code> - Returns the case swapped string.
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| str | <code>string</code> |  | The string to swap cases on. |

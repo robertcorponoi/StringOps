@@ -507,6 +507,45 @@ function center(str, length) {
   var charsOnEachSide = length - strLength;
   return pad(str, _char, charsOnEachSide, 'both');
 }
+/**
+ * Swaps the case of each letter in a string.
+ * 
+ * Souce: Python - swapcase
+ * 
+ * @param {string} str The string to swap cases on.
+ * 
+ * @returns {string} Returns the case swapped string.
+ */
+
+function swapcase(str) {
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  var swapped = '';
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = str[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var _char2 = _step.value;
+      if (!characters.includes(_char2)) swapped += _char2;else if (_char2 === _char2.toUpperCase()) swapped += _char2.toLowerCase();else swapped += _char2.toUpperCase();
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return swapped;
+}
 
 exports.bin2Hex = bin2Hex;
 exports.center = center;
@@ -525,6 +564,7 @@ exports.nthIndexOf = nthIndexOf;
 exports.pad = pad;
 exports.reverse = reverse;
 exports.rtrim = rtrim;
+exports.swapcase = swapcase;
 exports.ucword = ucword;
 exports.ucwords = ucwords;
 exports.wordwrap = wordwrap;

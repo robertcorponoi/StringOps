@@ -8,11 +8,8 @@ import resolve from 'rollup-plugin-node-resolve';
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 export default {
-
   input: './src/index.ts',
-
   external: [],
-
   plugins: [
     resolve({ extensions }),
 
@@ -20,7 +17,6 @@ export default {
 
     babel({ extensions, include: ['src/**/*'] }),
   ],
-
   output: [{
     file: pkg.main,
     format: 'cjs',
@@ -28,5 +24,4 @@ export default {
     file: pkg.module,
     format: 'esm',
   }]
-
 };

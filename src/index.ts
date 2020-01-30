@@ -26,7 +26,8 @@ import {
   money,
   pad,
   nl2br,
-  center
+  center,
+  swapcase,
 } from './format';
 
 export {
@@ -50,4 +51,5 @@ export {
   pad,
   nl2br,
   center,
+  swapcase,
 };

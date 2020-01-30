@@ -17,7 +17,6 @@ import CharCount from './interfaces/CharCount';
  * const helloCount = stringops.count(text, 'hello'); // 2
  */
 export function count(haystack: string, needle: string): number {
-
   let count: number = 0;
 
   let results: boolean = true;
@@ -25,25 +24,18 @@ export function count(haystack: string, needle: string): number {
   let lastIndex: number = 0;
 
   while (results) {
-
     const index: number = haystack.indexOf(needle, lastIndex);
 
     if (index > -1) {
-
       count++;
 
       lastIndex = index + 1;
-
     } else {
-
       results = false;
-
     }
-
   }
 
   return count;
-
 }
 
 /**
@@ -60,19 +52,15 @@ export function count(haystack: string, needle: string): number {
  * const charCount = stringops.countChars(text); // { h: 1, e: 1, l: 3, o: 2, w: 1, r: 1, d: 1 }
  */
 export function countChars(str: string): CharCount {
-
   const count: CharCount = {};
 
   for (const character of str) {
-
     if (!count[character]) count[character] = 0;
 
     count[character]++;
-
   }
 
   return count;
-
 }
 
 /**
@@ -91,21 +79,17 @@ export function countChars(str: string): CharCount {
  * const nthIndex = stringops.nthIndexOf(text, 'l', 3); // 7
  */
 export function nthIndexOf(str: string, sub: string, occurance: number): (number | undefined) {
-
   let lastIndex: number = 0;
 
   for (let i = 0; i < occurance; i++) {
-
     const index = str.indexOf(sub, lastIndex);
 
     if (index == -1) return;
 
     lastIndex = index + 1;
-
   }
 
   return lastIndex;
-
 }
 
 /**
@@ -126,7 +110,6 @@ export function nthIndexOf(str: string, sub: string, occurance: number): (number
  * const lev = stringops.levenshtein(str1, str2); // 3
  */
 export function levenshtein(str1: string, str2: string): number {
-
   if (str1.length == 0) return str2.length;
   if (str2.length == 0) return str1.length;
 
@@ -137,15 +120,10 @@ export function levenshtein(str1: string, str2: string): number {
   for (let j = 0; j <= str1.length; ++j) table[0][j] = j;
 
   for (let i = 1; i <= str2.length; ++i) {
-
     for (let j = 1; j <= str1.length; ++j) {
-
       if (str2.charAt(i - 1) == str1.charAt(j - 1)) {
-
         table[i][j] = table[i - 1][j - 1];
-
       } else {
-
         table[i][j] = 
           Math.min(
             table[i - 1][j - 1] + 1,
@@ -154,15 +132,11 @@ export function levenshtein(str1: string, str2: string): number {
               table[i - 1][j] + 1
             )
           )
-
       }
-
     }
-
   }
 
   return table[str2.length][str1.length];
-
 }
 
 /**
@@ -175,19 +149,15 @@ export function levenshtein(str1: string, str2: string): number {
  * @returns {boolean} Returns true if all of the characters in the text are alphanumeric or false otherwise.
  */
 export function isAlnum(str: string): boolean {
-
   const allowedCharacters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
   for (let i = 0; i < str.length; ++i) {
-
     const char: string = str.charAt(i);
 
     if (allowedCharacters.indexOf(char) < 0) return false;
-
   }
 
   return true;
-
 }
 
 /**
@@ -200,17 +170,13 @@ export function isAlnum(str: string): boolean {
  * @returns {boolean} Returns true if all of the characters in the text are letters or false otherwise.
  */
 export function isAlpha(str: string): boolean {
-
   const allowedCharacters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
   for (let i = 0; i < str.length; ++i) {
-
     const char: string = str.charAt(i);
 
     if (allowedCharacters.indexOf(char) < 0) return false;
-
   }
 
   return true;
-
 }

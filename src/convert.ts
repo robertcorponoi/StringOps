@@ -14,9 +14,7 @@
  * console.log(hex); // '337AB7'
  */
 export function bin2Hex(bin: string): string {
-
   return parseInt(bin, 2).toString(16).toUpperCase();
-
 }
 
 /**
@@ -33,7 +31,5 @@ export function bin2Hex(bin: string): string {
  * console.log(bin); // '1100110111101010110111'
  */
 export function hex2Bin(hex: string): string {
-
   return parseInt(hex, 16).toString(2);
-
 }
