@@ -1,6 +1,6 @@
 {
   "name": "stringops",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "String functions you'll wish you had before.",
   "main": "index.js",
   "module": "stringops.js",
@@ -37,16 +37,16 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-typescript": "^7.8.3",
-    "ava": "^3.1.0",
-    "rollup": "^1.30.1",
-    "rollup-plugin-babel": "^4.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-typescript": "^7.9.0",
+    "ava": "^3.7.0",
+    "rollup": "^2.6.1",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.3"
   }
 }
